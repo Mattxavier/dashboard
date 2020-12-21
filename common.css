@@ -1,0 +1,38 @@
+:root {
+    /* #region Nav variables*/
+    --nav-bg-color: #FFFFFF;
+    --nav-width: calc(98 / 16 * 1rem);
+    /* #endregion */
+
+    --body-bg-color: #EFF3F9;
+
+    --purple-theme-color: #7F7FD5;
+}
+
+/* #region Genérioco*/
+
+html {
+    background-color: var(--body-bg-color);
+}
+
+html,
+body {
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+}
+
+/* #endregion */
+
+/* #region Classes genéricas*/
+
+/* DEBUG: Remover após finalização do projeto. */
+.placeholder {
+    width: var(--width, 25px);
+    height: var(--height, 25px);
+    background-color: var(--purple-theme-color);
+}
+
+/* #endregion */
