@@ -1,0 +1,67 @@
+.nav {
+    background-color: var(--nav-bg-color, white);
+    width: var(--nav-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: calc(53 / 16 * 1rem) 0 calc(48 / 16 * 1rem);
+}
+
+.nav__list {
+    align-self: stretch;
+    margin: 0;
+}
+
+.nav__list__item {
+    margin-bottom: 1rem;
+}
+
+.nav__list__link {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    opacity: 0.3;
+    /* 
+    12.5 é o espaçamento distribuido da altura
+    total da barra menos a altura total do ícone,
+    divido por 2, sendo: (50px - 25px) / 2 .
+    */
+    padding: calc(12.5 / 16 * 1rem) 0;
+
+    transition: opacity .2s;
+}
+
+.nav__list__link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: calc(4 / 16 * 1rem);
+    background-color: var(--purple-theme-color);
+    border-top-right-radius: calc(10 / 16 * 1rem);
+    border-bottom-right-radius: calc(10 / 16 * 1rem);
+
+    transform: scaleY(0);
+    transition: transform .2s;
+}
+
+/* #region Hover*/
+.nav__list__link:hover:not(.nav__list__link--active) {
+    opacity: 0.75;
+}
+
+.nav__list__link:hover:not(.nav__list__link--active):before {
+    transform: scaleY(0.5);
+}
+
+/* #endregion */
+
+.nav__list__link--active {
+    opacity: 1;
+}
+
+.nav__list__link--active::before {
+    transform: scaleY(1);
+}
