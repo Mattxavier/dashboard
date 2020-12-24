@@ -12,3 +12,11 @@ for (const link of Array.from(document.querySelectorAll(".nav__list__link"))) {
     });
 
 }
+
+//#region Toggler
+const botaoToggler = document.querySelector(".nav__theme-toggler");
+
+botaoToggler.addEventListener("click", function() {
+    botaoToggler.classList.toggle("nav__theme-toggler--active");
+});
+//#endregion

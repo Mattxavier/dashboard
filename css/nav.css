@@ -1,3 +1,7 @@
+nav li::before {
+    content: none;
+}
+
 .nav {
     background-color: var(--nav-bg-color, white);
     width: var(--nav-width);
@@ -19,8 +23,10 @@
 
 .nav__list__link {
     display: flex;
+    align-items: center;
     justify-content: center;
     position: relative;
+    min-height: calc(60 / 16 * 1rem);
     opacity: 0.3;
     /* 
     12.5 é o espaçamento distribuido da altura
@@ -30,6 +36,10 @@
     padding: calc(12.5 / 16 * 1rem) 0;
 
     transition: opacity .2s;
+}
+
+.nav__list__link__icon {
+    color: var(--purple-theme-color);
 }
 
 .nav__list__link::before {
@@ -64,4 +74,42 @@
 
 .nav__list__link--active::before {
     transform: scaleY(1);
+}
+
+.nav__theme-toggler {
+    --ball-size: calc(20 / 16 * 1rem);
+    /* --padding-top-bottom: calc(5 / 16 * 1rem); */
+    --padding-left-right: calc(8 / 16 * 1rem);
+    --toggle-width: calc(60 / 16 * 1rem);
+
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    width: var(--toggle-width);
+    height: calc(30 / 16 * 1rem);
+    padding: 0;
+    /* padding: var(--padding-top-bottom) 0; */
+    background-color: transparent;
+    border: calc(0.5 / 16 * 1rem) solid #4F4F4F;
+    border-radius: 50px;
+    position: relative;
+}
+
+.nav__theme-toggler::before {
+    content: '';
+    width: var(--ball-size);
+    height: var(--ball-size);
+    border-radius: 50%;
+    background-color: var(--purple-theme-color);
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: var(--padding-left-right);
+    margin: auto;
+    transition: transform .2s;
+}
+
+.nav__theme-toggler--active::before {
+    transform: translateX(calc((var(--toggle-width) / 2) - var(--padding-left-right)));
 }
