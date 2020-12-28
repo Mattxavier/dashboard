@@ -1,0 +1,120 @@
+nav li::before {
+    content: none;
+}
+
+.nav {
+    background-color: var(--nav-bg-color, white);
+    width: var(--nav-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: calc(53 / 16 * 1rem) 0 calc(48 / 16 * 1rem);
+}
+
+.nav__list {
+    align-self: stretch;
+    margin: 0;
+}
+
+.nav__list__item {
+    margin-bottom: 1rem;
+}
+
+.nav__list__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: calc(60 / 16 * 1rem);
+    opacity: 0.3;
+    /* 
+    12.5 é o espaçamento distribuido da altura
+    total da barra menos a altura total do ícone,
+    divido por 2, sendo: (50px - 25px) / 2 .
+    */
+    padding: calc(12.5 / 16 * 1rem) 0;
+
+    transition: opacity .2s;
+}
+
+.nav__list__link__icon {
+    color: var(--purple-theme-color);
+}
+
+.nav__list__link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: calc(4 / 16 * 1rem);
+    background-color: var(--purple-theme-color);
+    border-top-right-radius: calc(10 / 16 * 1rem);
+    border-bottom-right-radius: calc(10 / 16 * 1rem);
+
+    transform: scaleY(0);
+    transition: transform .2s;
+}
+
+/* #region Hover*/
+.nav__list__link:hover:not(.nav__list__link--active) {
+    opacity: 0.75;
+}
+
+.nav__list__link:hover:not(.nav__list__link--active):before {
+    transform: scaleY(0.5);
+}
+
+/* #endregion */
+
+.nav__list__link--active {
+    opacity: 1;
+}
+
+.nav__list__link--active::before {
+    transform: scaleY(1);
+}
+
+.nav__theme-toggler {
+    --ball-size: calc(20 / 16 * 1rem);
+    /* --padding-top-bottom: calc(5 / 16 * 1rem); */
+    --padding-left-right: calc(8 / 16 * 1rem);
+    --toggle-width: calc(60 / 16 * 1rem);
+
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    width: var(--toggle-width);
+    height: calc(30 / 16 * 1rem);
+    padding: 0;
+    /* padding: var(--padding-top-bottom) 0; */
+    background-color: transparent;
+    border: calc(0.5 / 16 * 1rem) solid #4F4F4F;
+    border-radius: 50px;
+    position: relative;
+}
+
+.nav__theme-toggler::before {
+    content: '';
+    width: var(--ball-size);
+    height: var(--ball-size);
+    border-radius: 50%;
+    background-color: var(--purple-theme-color);
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: var(--padding-left-right);
+    margin: auto;
+    transition: transform .2s;
+
+    background-image: url(../img/lua.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nav__theme-toggler--active::before {
+    transform: translateX(calc((var(--toggle-width) / 2) - var(--padding-left-right)));
+    background-image: url(../img/elipse.svg);
+}
