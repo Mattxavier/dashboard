@@ -108,8 +108,13 @@ nav li::before {
     left: var(--padding-left-right);
     margin: auto;
     transition: transform .2s;
+
+    background-image: url(../img/lua.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .nav__theme-toggler--active::before {
     transform: translateX(calc((var(--toggle-width) / 2) - var(--padding-left-right)));
+    background-image: url(../img/elipse.svg);
 }
