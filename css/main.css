@@ -1,0 +1,56 @@
+.main-content {
+    flex: 1;
+    padding: calc(43 / 16 * 1rem) calc(48 / 16 * 1rem) 0;
+}
+
+.main-content__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.header__title {
+    color: var(--text-color-dark);
+    margin: 0;
+}
+
+.header__search {
+    --padding-top-bottom: calc(12 / 16 * 1rem);
+    border: 1px solid #EBEBEB;
+    background: #FDFDFF;
+    border-radius: 8px;
+    padding: calc(12 / 16 * 1rem) calc(18 / 16 * 1rem);
+    padding: var(--padding-top-bottom) calc(18 / 16 * 1rem) var(--padding-top-bottom) calc((9 + 18 + 11) / 16 * 1rem);
+    background-image: url(../img/lupa.svg);
+    background-repeat: no-repeat;
+    background-position: 18px 50%;
+    margin-left: calc(45 / 16 * 1rem);
+    margin-right: calc(14 / 16 * 1rem);
+}
+
+/* #region Account*/
+.header__account {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.account__username {
+    font-weight: 600;
+    color: var(--text-color-dark);
+    font-size: calc(20 / 16 * 1rem);
+    margin: 0;
+}
+
+.account__avatar {
+    border-radius: 50%;
+    margin: 0 calc(10 / 16 * 1rem);
+}
+
+.account__dropdown__button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* #endregion */
