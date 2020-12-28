@@ -18,7 +18,7 @@
     --padding-top-bottom: calc(12 / 16 * 1rem);
     border: 1px solid #EBEBEB;
     background: #FDFDFF;
-    border-radius: 8px;
+    border-radius: calc(8 / 16 * 1rem);
     padding: calc(12 / 16 * 1rem) calc(18 / 16 * 1rem);
     padding: var(--padding-top-bottom) calc(18 / 16 * 1rem) var(--padding-top-bottom) calc((9 + 18 + 11) / 16 * 1rem);
     background-image: url(../img/lupa.svg);
