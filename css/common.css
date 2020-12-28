@@ -7,6 +7,8 @@
     --body-bg-color: #EFF3F9;
 
     --purple-theme-color: #7F7FD5;
+
+    --text-color-dark: #4F4F4F;
 }
 
 /* #region Genérioco*/
@@ -22,6 +24,7 @@ body {
 
 body {
     display: flex;
+    font-family: 'Khula', sans-serif;
 }
 
 /* #endregion */
