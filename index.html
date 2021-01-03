@@ -122,17 +122,94 @@
         <header class="main-content__header">
             <h1 class="header__title">Statistics</h1>
             <input placeholder="Search" type="search" name="" id="" class="header__search">
+                  <!-- Ringbell -->
+                  <div class="notification-bell">
+                      <span class="notification-bell__img"></span>
+                      <span class="notification-bell__alert"></span>
+                  </div>
 
-            <div class="header__account">
-                <p class="account__username">Anya</p>
-                <img src="https://i.pravatar.cc/50?img=5" alt="" class="account__avatar">
-                <button class="account__dropdown__button" type="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
-                        <path d="M1 1L5.28571 5L9 1" stroke="#5B5B5B" stroke-linecap="round"/>
-                    </svg>
-                </button>
-            </div>
+                <div class="header__account">
+                    <p class="account__username">Anya</p>
+                    <img src="https://i.pravatar.cc/50?img=5" alt="" class="account__avatar">
+                    <button class="account__dropdown__button" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                            <path d="M1 1L5.28571 5L9 1" stroke="#5B5B5B" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                </div>
         </header>
+        <div class="main-content__cards">
+            <div class="card-content">
+                <div class="card-content__header">
+                    <h2 class="card-title">Friends</h2>
+                    <div class="card-content__controls">
+                        <ul>
+                            <li class="controls-dot"></li>
+                            <li class="controls-dot"></li>
+                            <li class="controls-dot"></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card-content__main">
+                    <p class="card-people-number"> 271 People </p>
+                    <p class="card-number-percent"> + 0,7% <button class="statistic-arrow" type="button"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14"
+                                fill="none">
+                                <path
+                                    d="M1 6.07698L6.49995 0.999999M6.49995 0.999999L12 6.07698M6.49995 0.999999L6.49995 13"
+                                    stroke="#7F7FD5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></button></p>
+                </div>
+            </div>
+
+            <div class="card-content">
+                <div class="card-content__header">
+                    <h2 class="card-title">Unique Visitors</h2>
+                    <div class="card-content__controls">
+                        <ul>
+                            <li class="controls-dot"></li>
+                            <li class="controls-dot"></li>
+                            <li class="controls-dot"></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card-content__main">
+                    <p class="card-people-number"> 69 people </p>
+                    <p class="card-number-percent">- 1,7% <button class="statistic-arrow" type="button"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14"
+                                fill="none">
+                                <path d="M12 7.92302L6.50005 13M6.50005 13L1 7.92302M6.50005 13L6.50005 0.999999"
+                                    stroke="#E786D7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></button></p>
+                </div>
+            </div>
+
+            <div class="card-content">
+                <div class="card-content__header">
+                    <h2 class="card-title">Followers</h2>
+                    <div class="card-content__controls">
+                        <ul>
+                            <li class="controls-dot"></li>
+                            <li class="controls-dot"></li>
+                            <li class="controls-dot"></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card-content__main">
+                    <p class="card-people-number"> 288 people </p>
+                    <p class="card-number-percent"> + 1% <button class="statistic-arrow" type="button"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14"
+                                fill="none">
+                                <path
+                                    d="M1 6.07698L6.49995 0.999999M6.49995 0.999999L12 6.07698M6.49995 0.999999L6.49995 13"
+                                    stroke="#7F7FD5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></button></p>
+                </div>
+            </div>
+        </div>
     </main>
     <script src="js/index.js"></script>
 </body>

@@ -28,7 +28,11 @@
     margin-right: calc(14 / 16 * 1rem);
 }
 
+/* region Ringbell */
+
+
 /* #region Account*/
+
 .header__account {
     display: flex;
     align-items: center;
@@ -38,7 +42,7 @@
 .account__username {
     font-weight: 600;
     color: var(--text-color-dark);
-    font-size: calc(20 / 16 * 1rem);
+    font-size: var(--title-cards-account-size);
     margin: 0;
 }
 
@@ -48,9 +52,79 @@
 }
 
 .account__dropdown__button {
-    background-color: transparent;
-    border: none;
     cursor: pointer;
+}
+
+/* #endregion */
+
+/* #region Cards */
+
+h2 {
+    margin: 0;
+    font-size: var(--title-cards-account-size);
+    color: var(--text-color-dark);
+}
+
+.main-content__cards {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    margin-top: calc(38 / 16 * 1rem);
+    margin-right: calc(32 / 16 * -1rem);
+}
+
+.card-content {
+    /* max-width: 341px; */
+    height: 148px;
+    border: calc(1 / 16 * 1rem) solid #EBEBEB;
+    border-radius: 13px;
+    background-color: #ffffff;
+    flex: 1 0 auto;
+    /* flex: 1; */
+    padding: calc(24 / 16 * 1rem);
+    margin-right: calc(32 / 16 * 1rem);
+    margin-bottom: calc(32 / 16 * 1rem);
+}
+
+.card-content__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-content__controls {
+    display: flex;
+}
+
+.card-content__controls ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.controls-dot {
+    width: 5px;
+    height: 5px;
+    background: #979797;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.card-content__main {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: calc(45 / 16 * 1rem);
+}
+
+.card-people-number {
+    color: var(--text-color-dark);
+    font-size: var(--title-cards-account-size);
+    line-height: 1.17;
+}
+
+.card-number-percent {
+    line-height: 1.2;
+    color: #979797;
 }
 
 /* #endregion */
